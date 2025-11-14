@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Nitika Sahani</title>
+<style>
+    body {
+        margin: 0;
+        background: #ffd6e9;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    .container {
+        width: 90%;
+        max-width: 600px;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 25px rgba(255, 100, 150, 0.3);
+        text-align: center;
+    }
+    h1 {
+        color: #ff5b9f;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    #text {
+        font-size: 18px;
+        color: #444;
+        white-space: pre-wrap;
+        line-height: 1.6;
+    }
+    .heart {
+        position: fixed;
+        color: #ff4d88;
+        font-size: 22px;
+        animation: float 4s linear infinite;
+    }
+    @keyframes float {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-120px) scale(1.6); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="piano.mp3" type="audio/mpeg" />
+    </audio><div class="container">
+    <h1>💗 Happy Birthday Nitika Sahani 💗</h1>
+    <div id="text"></div>
+</div>
+
+<script>
+// Typing effect
+let message = `🌸 Happy Birthday to the most beautiful soul of my life,
+meri jaaan, meri sonee, mera pyara bachaa, mera babuu, mera buugga — Nitika Sahani ❤️🎂
+
+Aaj ka din mere liye utna hi special hai jitna tu mere liye hai, meri jaan.
+Teri smile 😇, tera care 🤗, tera pyaar ❤️ — sab mere dil ko ek alag hi sukoon deta hai.
+
+Tu sirf meri girlfriend nahi… tu meri jaan hai, meri peace hai, meri zindagi ka sabse pyara hissa. ✨💖
+
+Meri sonee Nitika Sahani… Kabhi socha nahi tha ki koi itna perfect bhi ho sakta hai. 💕
+Mera pyara bachaa, tu jab hasta hai na 😍 lagta hai saari khushiya tere chehre par hi ruk gayi hain.
+Aur jab tu thoda sa gussa hoti hai 😤➡️😚 to mera babuu aur bhi zyada cute lagta hai. 💗😗
+
+Mera buugga, tu mujhe itna pyaar, itni care, itni loyalty deti hai ki main roz ye sochta hu ki main kaunse acche karam ki wajah se tujhe paaya… meri blessing, mera gift, meri dream. 🌙✨
+
+Aaj tere birthday par meri ek hi dua hai — meri jaaan Nitika Sahani ki life me kabhi koi dukh na aaye… Aur agar aaye bhi, to pehle mujhe lage. 🤍
+Tu bas muskuraate rehna meri sonee 😊💞😚 baaki sab tera ladka sambhal lega. ❤️‍🔥
+
+Aaj main ye promise karta hu — chahe duniya badal jaye, par tere babuu ka pyaar kabhi nahi badlega. 💍❤️
+Main hamesha tera hi rahunga… tera buugga, tera bachaa, tera ladka. 🤝💗😗
+
+Har situation me, har happiness me, har fear me — main tera haath pakad kar hi chalunga. 🤲✨
+
+Tu meri life ka wo chapter hai jise main kabhi finish nahi hone dunga.
+Tu meri dua, meri destiny, meri choice sab kuch hai.
+Tere bina main adhura hu, meri jaan — Nitika Sahani. ❤️😚
+
+🎉 Happy Birthday once again meri jaaan, meri sonee, mera pyara bachaa — Nitika Sahani ❤️🎂
+May your life be full of joy, glow, success and endless happiness. ✨🌈
+I love you more than anything… today, tomorrow, forever 💖♾️🔥😗
+
+
+Sun meri pyaari si bachii… Aaj tera birthday hai, aur is din ka sabse zyada wait maine hi kiya tha.
+Aur ab jab din aaya hai… main tere paas nahi ho sakta, match hai, coach aane nahi de raha… par bachaa, mera dil, mera pyaar, meri har heartbeat sirf tere saath hi hai. 😔❤️
+
+Haan thoda jealous hoon 😒😚 soch ke ki aaj log tere paas honge aur main nahi… par kya karu, mera pyaar tujh par zyada hai.
+Tera ladka tujhe pagalpan ki hadd tak love karta hai. ❤️‍🔥😗
+
+Meri jaan Nitika Sahani, tu hamesha khush reh, safe reh, successful ho, meri umar tujhe lag jaye… tu chamakti rahe meri roshni ban ke. ✨🌙
+
+Mujhe kuch nahi chahiye… bas tu muskuraati reh meri sonee 😚💞 baaki sab tera ladka sambhal lega.
+
+Once again Happy Birthday meri pyaari, sweet, cutieee si bachhiii… meri jaanuu, meri soul, mera everything.
+Lobeee juuuuuuuuu 😚😗❤️🔥`;
+
+let i = 0;
+function type() {
+    if (i < message.length) {
+        document.getElementById("text").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(type, 25);
+    }
+}
+type();
+
+// Floating hearts
+setInterval(() => {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.top = "100vh";
+    heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 500);
+</script></body>
+</html>
